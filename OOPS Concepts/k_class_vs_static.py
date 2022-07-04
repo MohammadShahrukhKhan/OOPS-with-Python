@@ -1,0 +1,23 @@
+# Determining if when to use static and class methods 
+
+class Item:
+    @staticmethod
+    def is_integer(num):
+        pass
+
+# this should do something that has a relationship with the class, 
+# but not something that must be per instance 
+
+    @classmethod
+    def instantiate_from_something(cls):
+        pass
+
+# this should also do something that has a relationship with the class, 
+# but usually, those are used to manipulate diferent structures of data 
+# to instantiate objects. like we did in _csv_2.py 
+
+# However those could also be called from instances 
+
+item1 = Item()
+item1.is_integer()
+item1.instantiate_from_something()
